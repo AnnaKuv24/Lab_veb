@@ -1,0 +1,43 @@
+<html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <title>KuvarzinaLab03-2</title>
+   <style>
+      marquee {
+         display: block;      /* щоб працював margin */
+         margin: 40px 0;      /* відступи зверху і знизу */
+         border: 2px solid #3b3333;
+         border-radius: 8px; 
+      }
+   </style>
+</head>
+<body bgcolor="#f0f5f5" text="#000000">
+
+   <!-- 1. Коливання з боку в бік -->
+   <marquee width="100%" height="65" bgcolor="#facfcf" behavior="alternate" scrollamount="5">
+      <font color="#780406" face="Verdana" size="4"><b>Текст коливається з боку в бік</b></font>
+   </marquee>
+
+   <!-- 2. Пробігає справа наліво і з'являється знову -->
+   <marquee width="100%" height="65" bgcolor="#c8f7ce" behavior="scroll" direction="left" scrollamount="6">
+      <font color="#054f05" face="Tahoma" size="4"><b>Текст пробігає справа наліво та з’являється знову</b></font>
+   </marquee>
+
+   <!-- 3. Пробігає зліва направо і зупиняється -->
+   <marquee width="100%" height="65" bgcolor="#c8cbf7" behavior="slide" direction="right" scrollamount="30">
+      <font color="#05054f" face="Arial" size="4"><b>Текст пробігає зліва направо та зупиняється</b></font>
+   </marquee>
+
+   <!-- 4. Перший рядок із запізненням -->
+   <marquee width="100%" height="65" bgcolor="#f7f7d2" behavior="scroll" direction="left" scrollamount="4" scrolldelay="100">
+      <font color="#4d4a05" face="Times New Roman" size="4"><b>Перший рядок із запізненням (повільний рух)</b></font>
+   </marquee>
+
+   <!-- 5. Другий рядок із запізненням -->
+   <marquee width="100%" height="65" bgcolor="#f0d4fa" behavior="scroll" direction="left" scrollamount="8" scrolldelay="25">
+      <font color="#330345" face="Georgia" size="4"><b>Другий рядок із запізненням (швидший рух)</b></font>
+   </marquee>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+   <title>KuvarzinaLab03-3</title>
+   <style>
+      marquee {
+         display: block;         
+         margin: 30px 0;         /* відступи між рядками */
+         border: 2px solid black;
+         border-radius: 8px;
+
+      }
+   </style>
+</head>
+<body bgcolor="#f0f0f0" text="#000000">
+
+   <!-- 1. Текст та рисунки у рядку коливаються -->
+   <marquee width="95%" height="300" bgcolor="#ffcccc" behavior="alternate" direction="up" scrollamount="5">
+      <font color="#690a05" face="Verdana" size="4"><b>Текст коливається</b></font><br>
+      <img src="funny.png" height="250">
+      <img src="luba.png" height="250">
+   </marquee>
+
+   <!-- 2. Послідовність рисунків знизу до гори та з’являється знову -->
+   <marquee width="45%" height="300" bgcolor="#ccffcc" behavior="scroll" direction="up" scrollamount="4">
+      <img src="cat1.png" height="200" style="display:block; margin:10px auto;"><br>
+      <img src="cat2.png" height="270" style="display:block; margin:10px auto;"><br>
+      <img src="cat3.jpg" height="400" style="display:block; margin:10px auto;">
+   </marquee>
+
+   <!-- 3. Послідовність рисунків згори до низу із зупинкою -->
+   <marquee width="45%" height="300" bgcolor="#ccccff" behavior="slide" direction="down" scrollamount="4">
+      <img src="pic1.jpg" height="165" style="display:block; margin:1px auto;"><br>
+      <img src="pic2.jpg" height="120" style="display:block; margin:1px auto;">
+   </marquee>
+   <!-- 4. Перший рядок із запізненням -->
+   <marquee width="95%" height="80" bgcolor="#ffffcc" behavior="scroll" direction="up" scrollamount="2" scrolldelay="120">
+      <font color="#696905" face="Courier New" size="4"><b>Повільний рух тексту вгору із запізненням</b></font>
+   </marquee>
+
+   <!-- 5. Другий рядок із запізненням -->
+   <marquee width="95%" height="100" bgcolor="#e3b0f7" behavior="scroll" direction="down" scrollamount="6" scrolldelay="60">
+      <font color="#510569" face="Georgia" size="4"><b>Швидший рух тексту вниз із меншим запізненням</b></font>
+   </marquee>
+
+</body>
+</html>
