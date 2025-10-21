@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Мої друзі</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6eefa;
+            text-align: center;
+            margin: 30px;
+        }
+
+        h1 {
+            color: #081f57;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        img {
+            border: 4px solid #3a60ba;
+            border-radius: 10px;
+            max-width: 90%;
+        }
+
+        .info {
+            margin-top: 40px;
+            color: #f2f5fc;
+            padding: 20px;
+            background-color: #3a60ba;
+            border-radius: 12px;
+            display: inline-block;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Мої друзі</h1>
+    <p>Наведіть курсор на фото, щоб побачити імена, і натисніть, щоб дізнатися більше!</p>
+
+    <!-- Фото з картою -->
+    <img src="friends.jpg" alt="Мої друзі" usemap="#friendsmap">
+
+    <!-- Навігаційна карта -->
+    <map name="friendsmap">
+        <area shape="rect" coords="13,22,426,421" href="#mascha" alt="#Маша" title="Маша">
+        <area shape="rect" coords="3,436,394,828"  href="#sanya" alt="#Саша" title="Саша">
+        <area shape="rect" coords="436,26,844,413" href="#Nika" alt="#Ніка" title="Ніка">
+        <area shape="poly" coords="408,442,808,419,833,820,429,847" href="#Vika" alt="Віка" title="Віка">
+        <area shape="poly" coords="881,33,1273,31,1271,430,880,404" href="#Anya" alt="Аня" title="Аня">
+        <area shape="poly" coords="867,416,1271,440,1251,846,846,821" href="#Nastya" alt="Настя" title="Настя">
+    </map>
+
+    <!-- Інформація про друзів -->
+    <div class="info" id="mascha">
+        <h2>Маша</h2>
+        <p>Творча натура, обожнює фотографію та подорожі. Має гарне почуття стилю.</p>
+    </div>
+
+    <div class="info" id="sanya">
+        <h2>Саша</h2>
+        <p>Активна й енергійна, бере участь у студентських заходах та волонтерських проєктах.</p>
+    </div>
+
+    <div class="info" id="andriy">
+        <h2>Ніка</h2>
+        <p>Спокійна, мрійлива, любить природу та прогулянки. Цінує щирість у людях.</p>
+    </div>
+
+    <div class="info" id="mascha">
+        <h2>Віка</h2>
+        <p>Весела й оптимістична, завжди заряджає друзів позитивом. Цікавиться ІТ та дизайном.</p>
+    </div>
+
+    <div class="info" id="mascha">
+        <h2>Аня</h2>
+        <p>Спокійна та розумна, завжди допомагає іншим із навчанням. Любить читати й створювати щось нове.</p>
+    </div>
+
+    <div class="info" id="mascha">
+        <h2>Настя</h2>
+        <p>Завжди усміхнена, відповідальна та доброзичлива. Чудово працює в команді.</p>
+    </div>
+
+</body>
+</html>

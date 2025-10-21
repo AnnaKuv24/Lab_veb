@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Карта з посиланнями</title>
+    <style>
+        body {
+            background-color: #eef;
+            text-align: center;
+            font-family: 'Times New Roman', sans-serif;
+        }
+        h2 {
+            font-size: 30px;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body style="text-align:center; background-color:#fffffa;">
+    <h2>Карта з посиланнями на сторінки</h2>
+    <p>Натисни на фігуру, щоб перейти до відповідної сторінки.</p>
+
+    <img src="Trufigyru.png" width="500" height="460" usemap="#links" alt="Навігаційна карта">
+
+    <map name="links">
+        <!-- Трикутник "Про мене" -->
+        <area shape="poly" 
+              coords="109,9,37,273,155,236,161,224,192,224,255,203,241,178,238,153,239,130,245,108"
+              href="kuvarzinaLab01-9.html" 
+              alt="Про мене" 
+              title="Перейти на сторінку Про мене">
+
+        <!-- Коло "Посилання" -->
+        <area shape="circle" 
+              coords="349,147,103" 
+              href="kuvarzinaLab5-3.html" 
+              alt="Посилання" 
+              title="Перейти на сторінку Посилання">
+
+        <!-- Прямокутник/паралелограм "Моя Батьківщина" -->
+        <area shape="poly" 
+              coords="67,386,163,226,275,225,298,243,330,253,363,254,399,243,315,385"
+              href="kuvarzinaLab06-3.html" 
+              alt="Моя Батьківщина" 
+              title="Перейти на сторінку Моя Батьківщина">
+    </map>
+</body>
+</html>
