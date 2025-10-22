@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>KuvarzinaLab07-2 — Використання елементів форми</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9f7ef;
+            margin: 40px;
+        }
+
+        h2 {
+            color: #117a65;
+            text-align: center;
+        }
+
+        form {
+            background-color: #d1f2eb;
+            border: 2px solid #117a65;
+            border-radius: 10px;
+            padding: 20px;
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 100%;
+            resize: none;
+        }
+
+        input[type="submit"], input[type="reset"], input[type="button"] {
+            margin: 10px 5px;
+            padding: 5px 10px;
+            background-color: #117a65;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+            background-color: #0b5345;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Форма з усіма елементами HTML</h2>
+
+    <form action="IKuvarzinaFormResult.htm" method="post" target="_blank">
+
+        <label>Ім’я:</label>
+        <input type="text" name="username" maxlength="40" size="40" placeholder="Введіть ваше ім’я">
+
+        <label>Пароль:</label>
+        <input type="password" name="password" maxlength="12" size="20" placeholder="Введіть пароль">
+
+        <label>Ваша стать:</label>
+        <input type="radio" name="gender" value="male"> Чоловіча
+        <input type="radio" name="gender" value="female"> Жіноча
+
+        <label>Ваші захоплення:</label>
+        <input type="checkbox" name="hobby" value="music" checked> Музика
+        <input type="checkbox" name="hobby" value="sport"> Спорт
+        <input type="checkbox" name="hobby" value="travel"> Подорожі
+        <input type="checkbox" name="hobby" value="reading"> Читання
+
+        <label>Курс навчання:</label>
+        <select name="course" size="1">
+            <option value="1">Перший</option>
+            <option value="2">Другий</option>
+            <option value="3" selected>Третій</option>
+            <option value="4">Четвертий</option>
+            <option value="5">П’ятий</option>
+        </select>
+
+        <label>Напишіть кілька слів про себе:</label>
+        <textarea name="about" rows="6" cols="60" wrap="virtual">Розкажіть про себе...</textarea>
+
+        <label>Прикріпіть файл:</label>
+        <input type="file" name="upload" size="50" accept=".jpg,.png,.pdf,.txt">
+
+        <br><br>
+        <input type="submit" value="Відправити форму">
+        <input type="reset" value="Очистити все">
+        <input type="button" value="Показати сьогоднішню дату" onclick="alert('Сьогодні: ' + new Date().toLocaleDateString('uk-UA'))">
+
+    </form>
+
+</body>
+</html>

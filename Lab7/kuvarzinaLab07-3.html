@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Анкета</title>
+<style>
+    body {
+        background-color: #ede4f2;
+        font-family: Arial, sans-serif;
+    }
+
+    table {
+        width: 80%;
+        border: 2px solid #560485;
+        border-collapse: collapse;
+        margin: 20px auto;
+        background-color: #dcc8e8;
+    }
+
+    th {
+        background-color: #b770e0;
+        font-size: 26px;
+        color: #2c0145;
+        text-align: center;
+        padding: 10px;
+    }
+
+    td {
+        border: 1px solid #560485;
+        padding: 8px;
+        vertical-align: top;
+    }
+
+    input[type="text"], input[type="email"] {
+        width: 95%;
+        padding: 4px;
+    }
+
+    .buttons {
+        text-align: center;
+        margin: 15px;
+    }
+
+    .buttons input {
+        margin: 5px;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    input[type="reset"] {
+        background-color: #ba166b; 
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 15px;
+        cursor: pointer;
+    }
+
+    input[type="reset"]:hover {
+        background-color: #961457; 
+    }
+
+    input[type="submit"] {
+        background-color: #3abd43; 
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 15px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #37a13e; 
+    }
+</style>
+</head>
+<body>
+
+<form action="KuvarzinaLab07-3-result.htm" method="post">
+    <table>
+        <tr>
+            <th colspan="3">Анкета</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>Прізвище</td>
+            <td><input type="text" name="surname"></td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Ім’я, по батькові</td>
+            <td><input type="text" name="fullname"></td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>Число і рік народження</td>
+            <td><input type="text" name="birthday"></td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>Домашня адреса</td>
+            <td><input type="text" name="address"></td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>Місце навчання (роботи)</td>
+            <td><input type="text" name="place"></td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>Домашній (робочий) телефон</td>
+            <td><input type="text" name="phone"></td>
+        </tr>
+        <tr>
+            <td>7.</td>
+            <td>E-mail</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>8.</td>
+            <td>Область наукових інтересів</td>
+            <td>
+                <ol>
+                    <li><input type="text" name="interest1"></li>
+                    <li><input type="text" name="interest2"></li>
+                    <li><input type="text" name="interest3"></li>
+                    <li><input type="text" name="interest4"></li>
+                    <li><input type="text" name="interest5"></li>
+                    <li><input type="text" name="interest6"></li>
+                </ol>
+            </td>
+        </tr>
+    </table>
+
+    <div class="buttons">
+        <input type="reset" value="Відмінити введення">
+        <input type="submit" value="Надіслати дані та перейти до 2 етапу реєстрації">
+    </div>
+</form>
+
+</body>
+</html>

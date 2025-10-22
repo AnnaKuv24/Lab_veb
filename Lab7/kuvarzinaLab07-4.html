@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Замовлення товару</title>
+   <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #ed95ce;
+            margin: 40px;
+        }
+        h1 {
+            text-align: center;
+            color: #70094c;
+        }
+        form {
+            background-color: #f7b0de;
+            border: 2px solid #a62e7c;
+            border-radius: 10px;
+            padding: 20px;
+            width: 450px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+            border: 1px solid #a62e7c;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .checkbox-group, .radio-group {
+            margin-top: 8px;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            accent-color: #ff66b3; 
+        }
+        input[type="submit"], input[type="reset"] {
+            margin-top: 15px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: #b3107a;
+        }
+        input[type="reset"] {
+            background-color: #4d0133;
+        }
+        input[type="submit"]:hover {
+            background-color: #8a0b5d;
+        }
+        input[type="reset"]:hover {
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Форма замовлення товару</h1>
+    <form action="IvanennkoLab07-4-result.htm" method="post">
+        <label>Номер банківського рахунку:</label>
+        <input type="text" name="account" placeholder="UA1234567890123456" required>
+
+        <label>Особистий номер користувача:</label>
+        <input type="text" name="user_id" placeholder="Наприклад: 304TN123">
+
+        <label>Оберіть товари:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" name="product" value="laptop"> Ноутбук<br>
+            <input type="checkbox" name="product" value="smartphone"> Смартфон<br>
+            <input type="checkbox" name="product" value="headphones"> Навушники<br>
+            <input type="checkbox" name="product" value="tablet"> Планшет<br>
+            <input type="checkbox" name="product" value="watch"> Розумний годинник
+        </div>
+
+        <label>Коментарі користувача:</label>
+        <textarea name="comments" rows="6" placeholder="Вкажіть побажання або уточнення"></textarea>
+
+        <label>Вид оплати:</label>
+        <div class="radio-group">
+            <input type="radio" name="payment" value="cash" checked> Готівковий розрахунок<br>
+            <input type="radio" name="payment" value="non-cash"> Безготівковий розрахунок
+        </div>
+
+        <label>Отримати додаткову інформацію:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" name="info_balance"> Дані про залишки на рахунку<br>
+            <input type="checkbox" name="info_payments"> Список останніх виплат по рахунку<br>
+            <input type="checkbox" name="info_nothing"> Нічого з вище перерахованого
+        </div>
+
+        <input type="submit" value="Надіслати замовлення">
+        <input type="reset" value="Очистити форму">
+    </form>
+</body>
+</html>
