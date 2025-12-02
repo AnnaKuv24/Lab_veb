@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Команди Git - Довідник</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .blog-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .blog-subtitle {
+            font-size: 24px;
+            color: #666;
+            margin: 10px 0 30px 0;
+        }
+        .command-section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .command-item {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+        }
+        .command-desc {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .command-code {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 12px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+        .nav-menu {
+            background: #2c3e50;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .nav-menu a:hover {
+            background: #3498db;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #7f8c8d;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-menu">
+        <a href="../Lab11/kuvarzinaLab11-01.html">Головна</a>
+        <a href="../Lab12/register.html">Реєстрація</a>
+        <a href="git_commands.html">Команди Git</a>
+    </div>
+
+    <div class="container">
+        <section class="command-section">
+            <h2 class="section-title">Create a Repository</h2>
+    
+            <div class="command-item">
+                <div class="command-desc">From scratch --Create a new local repository</div>
+                <pre class="command-code">$ git init [project name]</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Download from an existing repository</div>
+                <pre class="command-code">$ git clone my_url</pre>
+            </div>
+
+            <h2 class="section-title">Observe your Repository</h2>
+    
+            <div class="command-item">
+                <div class="command-desc">List new or modified files not yet committed</div>
+                <pre class="command-code">$ git status</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Show the changes to files not yet staged</div>
+                <pre class="command-code">$ git diff</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Show the changes to staged files</div>
+                <pre class="command-code">$ git diff --cached</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Show all staged and unstaged file changes</div>
+                <pre class="command-code">$ git diff HEAD</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Show the changes between two commit ids</div>
+                <pre class="command-code">$ git diff commit1 commit2</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">List the change dates and authors for a file</div>
+                <pre class="command-code">$ git blame [file]</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Show the file changes for a commit id and/or file</div>
+                <pre class="command-code">$ git show [commit]:[file]</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Show full change history</div>
+                <pre class="command-code">$ git log</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Show change history for file/directory including diffs</div>
+                <pre class="command-code">$ git log -p [file/directory]</pre>
+            </div>
+
+            <h2 class="section-title">Working with Branches</h2>
+    
+            <div class="command-item">
+                <div class="command-desc">List all local branches</div>
+                <pre class="command-code">$ git branch</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">List all branches, local and remote</div>
+                <pre class="command-code">$ git branch -av</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Switch to a branch, my_branch, and update working directory</div>
+                <pre class="command-code">$ git checkout my_branch</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Create a new branch called new_branch</div>
+                <pre class="command-code">$ git branch new_branch</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Delete the branch called my_branch</div>
+                <pre class="command-code">$ git branch -d my_branch</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Merge branch_a into branch_b</div>
+                <div class="command-code">$ git checkout branch_b<br>$ git merge branch_a</div>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Tag the current commit</div>
+                <pre class="command-code">$ git tag my_tag</pre>
+            </div>
+
+            <h2 class="section-title">Make a change</h2>
+    
+            <div class="command-item">
+                <div class="command-desc">Stages the file, ready for commit</div>
+                <pre class="command-code">$ git add [file]</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Stage all changed files, ready for commit</div>
+                <pre class="command-code">$ git add .</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Commit all staged files to versioned history</div>
+                <pre class="command-code">$ git commit -m "commit message"</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Commit all your tracked files to versioned history</div>
+                <pre class="command-code">$ git commit -am "commit message"</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Unstages file, keeping the file changes</div>
+                <pre class="command-code">$ git reset [file]</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Revert everything to the last commit</div>
+                <pre class="command-code">$ git reset --hard</pre>
+            </div>
+
+            <h2 class="section-title">Synchronize</h2>
+    
+            <div class="command-item">
+                <div class="command-desc">Get the latest changes from origin (no merge)</div>
+                <pre class="command-code">$ git fetch</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Fetch the latest changes from origin and merge</div>
+                <pre class="command-code">$ git pull</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Fetch the latest changes from origin and rebase</div>
+                <pre class="command-code">$ git pull --rebase</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Push local changes to the origin</div>
+                <pre class="command-code">$ git push</pre>
+            </div>
+
+            <h2 class="section-title">Finally!</h2>
+    
+            <div class="command-item">
+                <div class="command-desc">When in doubt, use git help</div>
+                <pre class="command-code">$ git command --help</pre>
+            </div>
+    
+            <div class="command-item">
+                <div class="command-desc">Or visit https://training.github.com/ for official GitHub training</div>
+                <pre class="command-code"></pre>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
