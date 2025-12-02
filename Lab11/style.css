@@ -1,0 +1,57 @@
+body {
+    background-image: url('imeges/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-style: italic; 
+    font-size: 20px;
+    margin-left: 10%; 
+    margin-right: 10%; 
+}
+
+p {
+    text-indent: 50px; 
+    text-align: justify;
+}
+
+h1 {
+    font-weight: bold; 
+    text-align: center; 
+    color: darkblue; 
+    font-style: normal; 
+}
+
+h2 {
+    font-size: 30px;
+    color: #19217d;
+    font-style: normal;
+}
+
+img {
+    max-width: 180px; 
+    margin: 10px;
+}
+.img-left {
+    float: left;
+    margin-right: 15px;
+}
+.img-right {
+    float: right;
+    margin-left: 15px;
+}
+
+a:link {
+    color: green;
+    text-decoration: none;
+}
+a:active {
+    color: blue;
+    text-decoration: none;
+}
+a:visited {
+    color: darkblue;
+    text-decoration: none;
+}
+a:hover {
+    color: #6d79e3 ;
+    text-decoration: underline;
+}
