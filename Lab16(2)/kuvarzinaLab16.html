@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №16</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            margin: 20px; 
+        }
+        .block { 
+            border: 1px solid #ccc; 
+            padding: 15px; 
+            margin-bottom: 20px; 
+        }
+        img { width: 300px;
+            height: 300px; 
+            border: 1px solid #000; 
+            margin: 5px; 
+        }
+        .box { 
+            width: 100px; 
+            height: 100px; 
+            border: 1px solid #000; 
+            display: inline-block; 
+            margin: 5px; 
+            background-color: lightgray; 
+        }
+        #demo { 
+            font-weight: bold; 
+            color: blue; 
+        }
+        p { cursor: pointer; 
+            border: 1px solid #ddd; 
+            padding: 5px; 
+            width: fit-content; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="block">
+    <h2>1. Картинки (onclick)</h2>
+    <img src="https://picsum.photos/300/300?1" width="300">
+    <img src="https://picsum.photos/300/300?2" width="300">
+    <img src="https://picsum.photos/300/300?3" width="300">
+</div>
+
+<div class="block">
+    <h2>2. Посилання (addEventListener)</h2>
+    <a href="https://google.com">Google</a>
+    <a href="https://youtube.com">YouTube</a>
+    <a href="https://github.com">GitHub</a>
+</div>
+
+<div class="block">
+    <h2>3 & 4. Елементи форми input</h2>
+    <input type="text" value="Значення 1">
+    <input type="text" value="Значення 2">
+    <input type="text" value="Значення 3">
+    <p id="demo">Тут з'явиться значення</p>
+</div>
+
+<div class="block">
+    <h2>5. Квадрат числа (параграфи)</h2>
+    <p class="num-para">два</p>
+    <p class="num-para">чотири</p>
+    <p class="num-para">шість</p>
+</div>
+
+<div class="block">
+    <h2>6. DIV (Чергування кольорів)</h2>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+<script>
+// ===== 1. Виведення width в консоль =====
+document.querySelectorAll('img').forEach(img => {
+    img.onclick = function() {
+        console.log(this.getAttribute('width')); // 
+    };
+});
+
+// ===== 2. Запис href в title при наведенні =====
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('mouseover', function() {
+        this.title = this.href; // 
+    });
+});
+
+// ===== 3 & 4. Обробка input =====
+const demoPara = document.getElementById('demo');
+document.querySelectorAll('input').forEach(inp => {
+    let clickedOnce = false;
+
+    inp.addEventListener('click', function() {
+        // Завдання 3 
+        demoPara.innerText = this.value;
+
+        // Завдання 4 
+        if (!clickedOnce) {
+            console.log(this.value);
+            clickedOnce = true;
+        } else {
+            alert(this.value);
+        }
+    });
+});
+
+// ===== 5. Квадрат числа [cite: 19] =====
+const numberMap = { "два": 2, "чотири": 4, "шість": 6 };
+document.querySelectorAll('.num-para').forEach(p => {
+    p.addEventListener('click', function() {
+        let val = numberMap[this.innerText.toLowerCase()];
+        if (val) {
+            this.innerText = val * val;
+        }
+    });
+});
+
+// ===== 6. Чергування кольору (Завдання 2.1) [cite: 22, 23] =====
+document.querySelectorAll('.box').forEach(box => {
+    const originalColor = "lightgray";
+
+    function setRed() {
+        this.style.backgroundColor = "red";
+        this.removeEventListener('click', setRed);
+        this.addEventListener('click', setOriginal);
+    }
+
+    function setOriginal() {
+        this.style.backgroundColor = originalColor;
+        this.removeEventListener('click', setOriginal);
+        this.addEventListener('click', setRed);
+    }
+
+    box.addEventListener('click', setRed);
+});
+</script>
+
+</body>
+</html>

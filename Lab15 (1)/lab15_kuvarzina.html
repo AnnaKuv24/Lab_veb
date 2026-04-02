@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна №15</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .output {
+            background: white;
+            padding: 10px;
+            margin-top: 10px;
+            min-height: 50px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Лабораторна №15 (JavaScript)</h1>
+
+<button onclick="task1()">Завдання 1</button>
+<button onclick="task2()">Завдання 2</button>
+<button onclick="task3()">Завдання 3</button>
+<button onclick="task4()">Завдання 4</button>
+<button onclick="task5()">Завдання 5</button>
+<button onclick="task6()">Завдання 6</button>
+
+<div class="output" id="output"></div>
+
+<script>
+const output = document.getElementById("output");
+
+// ===== Завдання 1 =====
+function task1() {
+    output.innerHTML = "<b>Прості числа:</b><br>";
+
+    let num = 2;
+    while (num <= 100) {
+        let isPrime = true;
+
+        for (let i = 2; i < num; i++) {
+            if (num % i === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime) {
+            output.innerHTML += num + " ";
+        }
+
+        num++;
+    }
+}
+
+// ===== Завдання 2 =====
+function task2() {
+    output.innerHTML = "<b>Числа від 0 до 10:</b><br>";
+
+    let i = 0;
+    do {
+        if (i === 0) {
+            output.innerHTML += i + " – це нуль<br>";
+        } else if (i % 2 === 0) {
+            output.innerHTML += i + " – парне число<br>";
+        } else {
+            output.innerHTML += i + " – непарне число<br>";
+        }
+        i++;
+    } while (i <= 10);
+}
+
+// ===== Завдання 3 =====
+function task3() {
+    let numb = 10000;
+    let result = numb;
+    let counter = 0;
+
+    while (result >= 50) {
+        result /= 2;
+        counter++;
+    }
+
+    output.innerHTML = `
+        <b>Результат:</b> ${result} <br>
+        <b>Ітерацій:</b> ${counter}
+    `;
+}
+
+// ===== Завдання 4 =====
+function task4() {
+    let month = parseInt(prompt("Введіть номер місяця (1-12):"));
+
+    let season = "";
+    let name = "";
+
+    switch (month) {
+        case 12: case 1: case 2:
+            season = "Зима"; break;
+        case 3: case 4: case 5:
+            season = "Весна"; break;
+        case 6: case 7: case 8:
+            season = "Літо"; break;
+        case 9: case 10: case 11:
+            season = "Осінь"; break;
+        default:
+            output.innerHTML = "Неправильне число";
+            return;
+    }
+
+    const months = [
+        "", "Січень", "Лютий", "Березень", "Квітень", "Травень",
+        "Червень", "Липень", "Серпень", "Вересень",
+        "Жовтень", "Листопад", "Грудень"
+    ];
+
+    name = months[month];
+
+    alert(name + " — це " + season);
+}
+
+// ===== Завдання 5 =====
+function task5() {
+    let Tc = parseFloat(prompt("Введіть температуру в Цельсіях:"));
+    let Tf = (9 / 5) * Tc + 32;
+
+    output.innerHTML = `
+        ${Tc}°C = <b>${Tf.toFixed(2)}°F</b>
+    `;
+}
+
+// ===== Завдання 6 =====
+function task6() {
+    let day = parseInt(prompt("Введіть число від 1 до 7:"));
+
+    const days = [
+        "", "Понеділок", "Вівторок", "Середа",
+        "Четвер", "П’ятниця", "Субота", "Неділя"
+    ];
+
+    if (day >= 1 && day <= 7) {
+        output.innerHTML = `<b>${days[day]}</b>`;
+    } else {
+        output.innerHTML = "Неправильне число";
+    }
+}
+</script>
+
+</body>
+</html>
